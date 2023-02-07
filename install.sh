@@ -1,7 +1,5 @@
-
 pacman -S sway
 pacman -S waybar
-pacman -S rof
 pacman -S wofi
 pacman -S swaylock
 pacman -S mako
