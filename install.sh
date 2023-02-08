@@ -1,3 +1,6 @@
+echo "XDG_SESSION_TYPE=wayland" >> /etc/environment
+
+pacman -S polkit
 pacman -S sway
 pacman -S waybar
 pacman -S wofi
