@@ -12,3 +12,6 @@ pacman -S alacritty
 pacman -S evince
 pacman -S libreoffice-fresh
 pacman -S qalculate-gtk
+pacman -S swaybg
+pacman -S git
+pacman -S base-devel
