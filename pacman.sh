@@ -1,5 +1,3 @@
-echo "XDG_SESSION_TYPE=wayland" >> /etc/environment
-
 pacman -S polkit
 pacman -S sway
 pacman -S waybar
@@ -10,19 +8,10 @@ pacman -S light
 pacman -S bluez bluez-utils btusb
 pacman -S pipewore pipewire-jack
 pacman -S sof-firmware
-
+pacman -S alacritty
 pacman -S evince
 pacman -S libreoffice-fresh
 pacman -S qalculate-gtk
-# Install ly
-#
-git config --global protocol.file.allow always
-
-yay -S ly
-
-
-yay -S telegram-desktop-bin
-yay -S microsoft-edge-stable-bin
-yay -S catppuccin-gtk-theme-mocha
-
-systemctl enable ly.service
+pacman -S swaybg
+pacman -S git
+pacman -S base-devel
