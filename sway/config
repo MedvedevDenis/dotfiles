@@ -52,7 +52,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 for_window [app_id="cava"] floating enable, resize set height 525 px,  resize set width 750 px,  move position 1135 490
-
+assign [app_id="cava"] 3
 ### Keyboard
 
 input * {
@@ -216,6 +216,7 @@ bar {
     swaybar_command waybar
 }
 
+exec mpd
 exec mako
-exec telegramdesktop
-
+exec thunar --daemon
+exec cava

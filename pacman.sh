@@ -8,7 +8,10 @@ pacman -S light
 pacman -S bluez bluez-utils btusb
 pacman -S pipewore pipewire-jack
 pacman -S sof-firmware
-
+pacman -S alacritty
 pacman -S evince
 pacman -S libreoffice-fresh
 pacman -S qalculate-gtk
+pacman -S swaybg
+pacman -S git
+pacman -S base-devel
