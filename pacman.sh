@@ -1,17 +1,27 @@
-pacman -S polkit
-pacman -S sway
-pacman -S waybar
-pacman -S wofi
-pacman -S swaylock
-pacman -S mako
-pacman -S light
-pacman -S bluez bluez-utils btusb
-pacman -S pipewore pipewire-jack
-pacman -S sof-firmware
-pacman -S alacritty
-pacman -S evince
-pacman -S libreoffice-fresh
-pacman -S qalculate-gtk
-pacman -S swaybg
-pacman -S git
-pacman -S base-devel
+pacman -S --noconfirm polkit
+pacman -S --noconfirm sway
+pacman -S --noconfirm waybar
+pacman -S --noconfirm wofi
+pacman -S --noconfirm swaylock
+pacman -S --noconfirm swaybg
+pacman -S --noconfirm  mako
+pacman -S --noconfirm light
+pacman -S --noconfirm bluez bluez-utils btusb
+pacman -S --noconfirm blueman
+
+pacman -S --noconfirm pipewore pipewire-jack
+pacman -S --noconfirm sof-firmware
+
+pacman -S --noconfirm alacritty
+
+pacman -S --noconfirm evince
+pacman -S --noconfirm libreoffice-fresh
+pacman -S --noconfirm qalculate-gtk
+pacman -S --noconfirm obsidian
+
+pacman -S --noconfirm rhytmbox
+
+pacman -S --noconfirm git
+pacman -S --noconfir base-devel
+
+pacman -S --noconfirm telegram-desktop

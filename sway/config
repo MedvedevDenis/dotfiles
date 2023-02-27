@@ -17,23 +17,16 @@ set $right l
 
 set $term alacritty
 
-set $menu wofi --show drun | xargs swaymsg exec
+set $menu rofi -show drun | xargs swaymsg exec
 
-output * bg /home/medvedev/.config/sway/wp1.png fill
+output * bg ~/.config/sway/wp2.jpeg fill
 
-set $gnome-schema org.gnome.desktop.interface
-
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Lavender-Dark'
-    gsettings set $gnome-schema icon-theme 'Your icon theme'
-    gsettings set $gnome-schema cursor-theme 'Your cursor Theme'
-}
 
 default_border pixel 2
 titlebar_border_thickness 2
  
-gaps inner 10
-gaps outer 10
+gaps inner 25
+gaps outer 25
 gaps bottom 0
 gaps top 0
 
@@ -61,11 +54,17 @@ for_window [window_type="menu"] floating enable
 
 for_window [app_id="cava"] floating enable, resize set height 525 px,  resize set width 750 px,  move position 1135 490
 assign [app_id="cava"] 3
+
 ### Keyboard
 
 input * {
     xkb_layout us,ru
     xkb_options grp:alt_shift_toggle
+
+}
+
+input type:touchpad {
+    dwt disabled
 }
 
 ### Key bindings
@@ -224,7 +223,7 @@ bar {
     swaybar_command waybar
 }
 
-exec mpd
+
 exec mako
 exec thunar --daemon
-exec cava
+exec blueman-applet 

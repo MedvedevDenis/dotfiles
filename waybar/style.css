@@ -1,12 +1,12 @@
 @import url("mocha.css");
 
 * {
-    
-    font-family: mononoki Nerd Font;
+
+    font-family: Fira Code;
     font-size: 14px;
+    font-style: normal;
     min-height: 0;
     background-color: @base;
-
 }
 
 #clock,
@@ -45,12 +45,10 @@ tooltip {
 
 #clock {
     color: @green;
-
 }
 
 #battery {
     color: @green;
-
 }
 
 #battery.charging {
@@ -71,5 +69,5 @@ tooltip {
 }
 
 #pulseaudio {
-    color: #a5b4cb;
+    color: @mauve;
 }
