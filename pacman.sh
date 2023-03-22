@@ -25,3 +25,4 @@ pacman -S --noconfirm git
 pacman -S --noconfir base-devel
 
 pacman -S --noconfirm telegram-desktop
+pacman -S --noconfirm papirus-icon-theme
