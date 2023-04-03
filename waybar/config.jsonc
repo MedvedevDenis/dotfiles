@@ -2,10 +2,10 @@
     "position": "top",
     "height": 3,
     "modules-left": [
-        "sway/workspaces",
+        "sway/workspaces"
     ],
     "modules-center": [
-        "sway/window"
+        "clock",
     ],
     "modules-right": [
         "tray",
@@ -15,9 +15,15 @@
         "temperature",
         "battery",
         "network",
-        "pulseaudio",
-        "clock",
+        "pulseaudio"
     ],
+    "clock": {
+        "format": "{:%A, %d %B %H:%M:%S}",
+        "tooltip": false,
+        "interval": 1,
+        "max-length": 35,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -28,21 +34,15 @@
             "2": [],
             "3": [],
             "4": [],
-            "5": [],
+            "5": []
         },
         "format-icons": {
-            "1": "<span font='18' rise='-1000'>󰇩</span>",
-            "2": "<span font='18' rise='-1000'>󰨞</span>",
-            "3": "<span font='18' rise='-1000'>󰨞</span>",
-            "4": "",
-            "5": "<span font='18' rise='-1000'></span>",
+            "1": "<span font='12'>1</span>",
+            "2": "<span font='12'>2</span>",
+            "3": "<span font='12'>3</span>",
+            "4": "<span font='12'>4</span>",
+            "5": "<span font='12'>5</span>"
         }
-    },
-    "clock": {
-        "format": "󰅐 {:%H:%M:%S} ",
-        "interval": 1,
-        "max-length": 25,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
     "battery": {
         "states": {
@@ -83,6 +83,6 @@
                 "",
                 ""
             ]
-        },
+        }
     }
 }
