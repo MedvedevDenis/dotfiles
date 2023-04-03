@@ -19,7 +19,7 @@ set $term alacritty
 
 set $menu rofi -show drun | xargs swaymsg exec
 
-output * bg ~/.config/sway/wp3.png fill
+output * bg ~/.config/sway/wp4.jpg fill
 
 
 default_border pixel 2
@@ -38,10 +38,6 @@ client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
-
-for_window [app_id="microsoft-edge"] floating enable
-for_window [shell="xdg_shell"] title_format "%title (%app_id)"
-for_window [shell="x_wayland"] title_format "%class - %title"
 
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable;
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] resize set 800 600
@@ -213,14 +209,11 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
     swaybar_command waybar
 }
 
 
 exec mako
-exec thunar --daemon
 exec blueman-applet 
+exec systemctl --user import-environment
