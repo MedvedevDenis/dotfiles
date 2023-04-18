@@ -14,6 +14,7 @@ set $left h
 set $down j
 set $up k
 set $right l
+set $opacity 0.9
 
 set $term alacritty
 
@@ -38,6 +39,9 @@ client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
+
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
 
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable;
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] resize set 800 600
@@ -82,7 +86,21 @@ bindsym $mod+d exec $menu
 
 floating_modifier $mod normal
 
-bindsym $mod+Shift+r exec swaylock
+bindsym $mod+Shift+r exec swaylock \
+	--screenshots \
+	--clock \
+	--indicator \
+	--indicator-radius 100 \
+	--indicator-thickness 7 \
+	--effect-blur 7x5 \
+	--effect-vignette 0.5:0.5 \
+	--ring-color bb00cc \
+	--key-hl-color 880033 \
+	--line-color 00000000 \
+	--inside-color 00000088 \
+	--separator-color 00000000 \
+	--grace 2 \
+	--fade-in 0.2
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -212,8 +230,9 @@ bar {
     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
     swaybar_command waybar
 }
-
-
-exec mako
-exec blueman-applet 
 exec systemctl --user import-environment
+
+exec flameshot
+exec telegram-desktop
+exec mako
+exec blueman-applet
