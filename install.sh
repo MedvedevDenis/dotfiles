@@ -19,7 +19,6 @@ sudo pacman -Sy --noconfirm polkit \
                       pavucontrol helvum \
                       sof-firmware \
                       libreoffice-fresh \ 
-                      qalculate-gtk \
                       obsidian \
                       papirus-icon-theme \
                       dbeaver \
@@ -31,7 +30,8 @@ sudo pacman -Sy --noconfirm polkit \
                       lutris \
                       docker \
                       ttf-fira-code \
-                      ttf-firacode-nerd 
+                      ttf-firacode-nerd \
+                      base-devel
 
 cd ~
 
@@ -41,11 +41,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-cd /opt
+cd ~
 sudo rm -rf yay-git
 
-sudo git clone https://aur.archlinux.org/yay-git.git
-sudo chown -R ${USER}:${USER} ./yay-git
+git clone https://aur.archlinux.org/yay-git.git
+sudo chown -R ${USER}:users ./yay-git
 cd yay-git
 makepkg -si
 yay -Syu
