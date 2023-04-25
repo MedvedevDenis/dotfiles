@@ -15,7 +15,7 @@ set $term alacritty
 
 set $menu rofi -show drun | xargs swaymsg exec
 
-output * bg ~/.config/sway/wp4.jpg fill
+output * bg ~/.config/sway/wp5.jpg fill
 
 
 default_border pixel 5
