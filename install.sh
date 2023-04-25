@@ -18,7 +18,6 @@ sudo pacman -Sy --noconfirm polkit \
                       pipewire pipewire-jack pipewire-alsa pipewire-pulse \
                       pavucontrol helvum \
                       sof-firmware \
-                     
                       libreoffice-fresh \ 
                       qalculate-gtk \
                       obsidian \
