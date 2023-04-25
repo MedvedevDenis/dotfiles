@@ -4,17 +4,12 @@ font pango:FiraCode Retina 12
 
 ### Variables
 
-set $opacity 1
-for_window [class=".*"] opacity $opacity
-for_window [app_id=".*"] opacity $opacity
-
 set $mod Mod4
 
 set $left h
 set $down j
 set $up k
 set $right l
-set $opacity 0.9
 
 set $term alacritty
 
@@ -23,7 +18,7 @@ set $menu rofi -show drun | xargs swaymsg exec
 output * bg ~/.config/sway/wp4.jpg fill
 
 
-default_border pixel 2
+default_border pixel 5
 titlebar_border_thickness 2
  
 gaps inner 25
@@ -232,7 +227,8 @@ bar {
 }
 exec systemctl --user import-environment
 
-exec flameshot
+exec flameshot &
 exec telegram-desktop
 exec mako
 exec blueman-applet
+exec_always autotiling -w 1 2 3 4 5 6 7 8 9
