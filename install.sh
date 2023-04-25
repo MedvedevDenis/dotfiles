@@ -1,11 +1,11 @@
 #!/bin/bash
 
-sudo sh -c 'echo  "XDG_SESSION_TYPE=wayland"' >> /etc/environment
-sudo sh -c 'echo  "XDG_SESSION_DESKTOP=sway"' >> /etc/environment
-sudo sh -c 'echo  "XDG_CURRENT_DESKTOP=sway"' >> /etc/environment
-sudo sh -c 'echo  "GTK_THEME=Catppuccin-Mocha-Standard-Lavender-Dark"' >> /etc/environment
-sudo sh -c 'echo  "_JAVA_AWT_WM_NONREPARENTING=1"' >> /etc/environment
-sudo sh -c 'echo  "QT_QPA_PLATFORM=wayland"' >> /etc/environment
+sh -c 'echo  "XDG_SESSION_TYPE=wayland"' >> /etc/environment
+sh -c 'echo  "XDG_SESSION_DESKTOP=sway"' >> /etc/environment
+sh -c 'echo  "XDG_CURRENT_DESKTOP=sway"' >> /etc/environment
+sh -c 'echo  "GTK_THEME=Catppuccin-Mocha-Standard-Lavender-Dark"' >> /etc/environment
+sh -c 'echo  "_JAVA_AWT_WM_NONREPARENTING=1"' >> /etc/environment
+sh -c 'echo  "QT_QPA_PLATFORM=wayland"' >> /etc/environment
 
 
 sudo pacman -Sy --noconfirm polkit \
@@ -31,7 +31,8 @@ sudo pacman -Sy --noconfirm polkit \
                       docker \
                       ttf-fira-code \
                       ttf-firacode-nerd \
-                      base-devel
+                      base-devel \
+                      fakeroot
 
 cd ~
 
