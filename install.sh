@@ -18,7 +18,7 @@ sudo pacman -Sy --noconfirm polkit \
                       pipewire pipewire-jack pipewire-alsa pipewire-pulse \
                       pavucontrol helvum \
                       sof-firmware \
-                      libreoffice-fresh \ 
+                      libreoffice-fresh \
                       obsidian \
                       papirus-icon-theme \
                       dbeaver \
@@ -31,8 +31,8 @@ sudo pacman -Sy --noconfirm polkit \
                       docker \
                       ttf-fira-code \
                       ttf-firacode-nerd \
-                      base-devel \
-                      fakeroot
+                      base-devel
+                    
 
 cd ~
 
