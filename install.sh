@@ -22,7 +22,6 @@ sudo pacman -Sy --noconfirm polkit \
                       obsidian \
                       papirus-icon-theme \
                       dbeaver \
-                      flameshot \
                       telegram-desktop discord \
                       evince \
                       eog \
@@ -31,8 +30,10 @@ sudo pacman -Sy --noconfirm polkit \
                       docker \
                       ttf-fira-code \
                       ttf-firacode-nerd \
-                      base-devel
-                    
+                      base-devel \
+                      xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome \
+                      flameshot  grim
+
 
 cd ~
 
@@ -43,13 +44,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 cd ~
-sudo rm -rf yay-git
-
+rm -rf yay-git
 git clone https://aur.archlinux.org/yay-git.git
 sudo chown -R ${USER}:users ./yay-git
 cd yay-git
 makepkg -si
 yay -Syu
+rm -rf yay-git
 
 cd ~
 
@@ -64,7 +65,7 @@ yay -S ly \
        musikcube  \
        cava
        
-systemctl enable ly.service
+systemctl enable ly
 systemctl enable bluetooth
 systemctl enable docker
 
@@ -84,6 +85,7 @@ cp -r waybar /home/${USER}/.config/waybar
 
 
 cd ~
+rm -rf rofi
 git clone https://github.com/catppuccin/rofi
 cd rofi/basic
 bash install.sh
