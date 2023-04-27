@@ -10,33 +10,38 @@ sh -c 'echo  "QT_QPA_PLATFORM=wayland"' >> /etc/environment
 
 sudo pacman -Sy --noconfirm polkit \
                       xorg-xwayland \
-                      zsh alacritty neovim \
+                      zsh alacritty neovim nano \
                       sway waybar rofi swaylock swaybg \
-                      mako\
+                      mako \
                       light \
                       bluez bluez-utils blueman \
                       pipewire pipewire-jack pipewire-alsa pipewire-pulse \
                       pavucontrol helvum \
                       sof-firmware \
                       libreoffice-fresh \
-                      obsidian \
+                      obsidian foliate \
                       papirus-icon-theme \
-                      dbeaver \
+                      dbeaver docker \
                       telegram-desktop discord \
                       evince \
                       eog \
                       nautilus \
                       lutris \
-                      docker \
                       ttf-fira-code \
                       ttf-firacode-nerd \
                       base-devel \
                       xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome \
                       flameshot  grim \
-                      network-manager-applet nm-connection-editor networkmanager-openvpn \
-                      foliate
-                      
+                      network-manager-applet nm-connection-editor networkmanager-openvpn
 
+echo "Enable multilib"
+
+sudo nano /etc/pacman.conf
+
+sudo pacman -Sy --noconfirm wine-staging \
+                      vulkan-icd-loader vulkan-intel lib32-vulkan-intel lib32-vulkan-icd-loader \
+                      lib32-alsa-lib lib32-alsa-plugins lib32-libpulse \
+                      steam
 
 cd ~
 
