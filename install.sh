@@ -33,7 +33,8 @@ sudo pacman -Sy --noconfirm polkit \
                       base-devel \
                       xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome \
                       flameshot  grim \
-                      network-manager-applet nm-connection-editor networkmanager-openvpn
+                      network-manager-applet nm-connection-editor networkmanager-openvpn \
+                      foliate
                       
 
 
