@@ -32,7 +32,9 @@ sudo pacman -Sy --noconfirm polkit \
                       ttf-firacode-nerd \
                       base-devel \
                       xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome \
-                      flameshot  grim
+                      flameshot  grim \
+                      network-manager-applet nm-connection-editor networkmanager-openvpn
+                      
 
 
 cd ~
