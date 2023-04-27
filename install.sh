@@ -32,7 +32,8 @@ sudo pacman -Sy --noconfirm polkit \
                       base-devel \
                       xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome \
                       flameshot  grim \
-                      network-manager-applet nm-connection-editor networkmanager-openvpn
+                      network-manager-applet nm-connection-editor networkmanager-openvpn \
+                      lollypop
 
 echo "Enable multilib"
 
@@ -70,7 +71,6 @@ yay -S ly \
        catppuccin-gtk-theme-mocha \
        autotiling \
        swaylock-effects-git \
-       musikcube  \
        cava
        
 systemctl enable ly
