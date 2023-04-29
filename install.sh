@@ -99,3 +99,5 @@ cd rofi/basic
 bash install.sh
 cd ~
 rm -rf rofi
+
+git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
