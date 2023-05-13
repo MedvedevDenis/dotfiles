@@ -10,7 +10,8 @@ sh -c 'echo  "QT_QPA_PLATFORM=wayland"' >> /etc/environment
 
 sudo pacman -Sy --noconfirm polkit \
                       xorg-xwayland \
-                      zsh alacritty neovim \
+                      wget \
+                      zsh alacritty bat neovim \
                       sway waybar rofi swaylock swaybg \
                       mako\
                       light \
@@ -89,3 +90,4 @@ cd rofi/basic
 bash install.sh
 cd ~
 rm -rf rofi
+
