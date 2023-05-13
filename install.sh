@@ -13,27 +13,37 @@ sudo pacman -Sy --noconfirm polkit \
                       wget \
                       zsh alacritty bat neovim \
                       sway waybar rofi swaylock swaybg \
-                      mako\
+                      mako \
                       light \
                       bluez bluez-utils blueman \
                       pipewire pipewire-jack pipewire-alsa pipewire-pulse \
                       pavucontrol helvum \
                       sof-firmware \
                       libreoffice-fresh \
-                      obsidian \
+                      obsidian foliate \
                       papirus-icon-theme \
-                      dbeaver \
-                      flameshot \
+                      dbeaver docker \
                       telegram-desktop discord \
                       evince \
                       eog \
                       nautilus \
                       lutris \
-                      docker \
                       ttf-fira-code \
                       ttf-firacode-nerd \
-                      base-devel
-                    
+                      base-devel \
+                      xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome \
+                      flameshot  grim \
+                      network-manager-applet nm-connection-editor networkmanager-openvpn \
+                      lollypop
+
+echo "Enable multilib"
+
+sudo nano /etc/pacman.conf
+
+sudo pacman -Sy --noconfirm wine-staging \
+                      vulkan-icd-loader vulkan-intel lib32-vulkan-intel lib32-vulkan-icd-loader \
+                      lib32-alsa-lib lib32-alsa-plugins lib32-libpulse \
+                      steam
 
 cd ~
 
@@ -44,13 +54,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 cd ~
-sudo rm -rf yay-git
-
+rm -rf yay-git
 git clone https://aur.archlinux.org/yay-git.git
 sudo chown -R ${USER}:users ./yay-git
 cd yay-git
 makepkg -si
 yay -Syu
+rm -rf yay-git
 
 cd ~
 
@@ -62,10 +72,9 @@ yay -S ly \
        catppuccin-gtk-theme-mocha \
        autotiling \
        swaylock-effects-git \
-       musikcube  \
        cava
        
-systemctl enable ly.service
+systemctl enable ly
 systemctl enable bluetooth
 systemctl enable docker
 
@@ -85,9 +94,13 @@ cp -r waybar /home/${USER}/.config/waybar
 
 
 cd ~
+rm -rf rofi
 git clone https://github.com/catppuccin/rofi
 cd rofi/basic
 bash install.sh
 cd ~
 rm -rf rofi
+
+
+git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
 
