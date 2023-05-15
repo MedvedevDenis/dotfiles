@@ -2,19 +2,16 @@
     "position": "top",
     "height": 3,
     "modules-left": [
-        "sway/workspaces"
+        "sway/workspaces",
     ],
     "modules-center": [
-        "clock",
+        "clock"
     ],
     "modules-right": [
         "tray",
         "sway/language",
-        "cpu",
-        "memory",
-        "temperature",
-        "battery",
         "network",
+        "battery",
         "pulseaudio"
     ],
     "clock": {
@@ -22,7 +19,7 @@
         "tooltip": false,
         "interval": 1,
         "max-length": 35,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
     // Modules configuration
     "sway/workspaces": {
@@ -37,52 +34,60 @@
             "5": []
         },
         "format-icons": {
-            "1": "<span font='12'>1</span>",
-            "2": "<span font='12'>2</span>",
-            "3": "<span font='12'>3</span>",
-            "4": "<span font='12'>4</span>",
-            "5": "<span font='12'>5</span>"
+            "default": "",
+            "urgent": "",
+            "focused": "",
         }
+    },
+    "tray":{
+        "spacing": 10
+    },
+    "sway/language": {
+        "format": " {short}"
     },
     "battery": {
         "states": {
-            "warning": 40,
-            "critical": 20
+            "warning": 30,
+            "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-plugged": "󰂄{capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-full": "󱈑 {capacity}%",
+        "format": "{icon}  {capacity}%",
+        "format-warning": "{icon}  {capacity}%",
+        "format-critical": "<span foreground='#E38C8F'>{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon}  {time}",
+        "format-full": " {capacity}%",
         "format-icons": [
-            "󱊡",
-            "󱊢",
-            "󱊣"
-        ]
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip-format": "{time}"
     },
     "network": {
-        "format-wifi": "{icon} {essid}",
-        "format-ethernet": "󰤮 Disconnected",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰤭  Отключено",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰤮 Disconnected",
-        "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+        "format-disconnected": "  Отключено",
+        "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
     },
     "pulseaudio": {
-        "on-click": "pactl set-sink-mute 45 toggle",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "format": "{icon}  {volume}%",
-        "format-muted": "󰖁 Muted",
+        "format-muted": "  Muted",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
             "default": [
-                "",
                 "",
                 ""
             ]
-        }
-    }
+        },
+    },
 }

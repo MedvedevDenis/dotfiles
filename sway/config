@@ -10,20 +10,22 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term alacritty
 
+set $term alacritty
 set $menu rofi -show drun | xargs swaymsg exec
-set $opacity 0.8
 
 output * bg ~/.config/sway/wp5.jpg fill
 
-default_border pixel 5
+output HDMI1 pos 0 0 res 1920x1080
+
+
+default_border pixel 3
 titlebar_border_thickness 2
  
-gaps inner 25
-gaps outer 25
-gaps bottom 0
-gaps top 0
+gaps inner 10
+gaps outer 10
+gaps bottom 10
+gaps top 10
 
 # target                 title     bg    text   indicator  border
 client.focused           $pink     $base $text  $rosewater $pink
@@ -34,8 +36,8 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 
-
-for_window [app_id="Alacritty"] opacity $opacity
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
 
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable;
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] resize set 800 600
@@ -51,7 +53,6 @@ for_window [window_type="menu"] floating enable
 input * {
     xkb_layout us,ru
     xkb_options grp:alt_shift_toggle
-
 }
 
 input type:touchpad {
@@ -109,6 +110,7 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
+
 # Or use $mod+[up|down|left|right]
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -140,58 +142,56 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
-
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
 bindsym $mod+Shift+3 move container to workspace number 3
 bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
-# Note: workspaces can have any name you want, not just numbers.
-# We just use 1-10 as the default.
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
 #
-
 # Layout stuff:
 #
-# You can "split" the current object of your focus with
-# $mod+b or $mod+v, for horizontal and vertical splits
-# respectively.
-bindsym $mod+b splith
-bindsym $mod+v splitv
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
 
-# Switch the current container between different layout styles
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
 
-# Make the current focus fullscreen
-bindsym $mod+f fullscreen
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
 
-# Toggle the current focus between tiling and floating mode
-bindsym $mod+Shift+space floating toggle
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
 
-# Swap focus between the tiling area and the floating area
-bindsym $mod+space focus mode_toggle
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
 
-# Move focus to the parent container
-bindsym $mod+a focus parent
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
 #
 # Scratchpad:
 #
-# Sway has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
 
-# Move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
 
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
 #
@@ -228,10 +228,6 @@ bar {
 }
 
 exec systemctl --user import-environment
-
-exec flameshot &
-exec telegram-desktop
 exec mako
 exec blueman-applet
-exec nm-applet
 exec_always autotiling -w 1 2 3 4 5 6 7 8 9

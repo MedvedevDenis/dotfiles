@@ -1,51 +1,80 @@
 @import url("mocha.css");
 
 * {
-
-    font-family: Fira Code;
-    font-size: 14px;
+    font-family: Fira Code Retina;
+    font-size: 13px;
     font-style: normal;
     min-height: 0;
-    background-color: @base;
+    border-radius: 0;
 }
 
-#clock,
-#battery,
-#temperature,
-#network,
-#pulseaudio,
-#cpu,
-#memory,
-#language,
-#tray {
-    margin-left: 10px;
+
+window#waybar {
+    background: #1E1E28;
+    color: #DADAE8;
 }
 
 tooltip {
     background: @base;
     border-radius: 15px;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
     border-color: @lavender;
 }
 
+#clock,
+#battery,
+#pulseaudio,
+#workspaces,
+#mpd,
+#tray,
+#language,
+#cpu,
+#memory,
+#network,
+#temperature {
+    background: @surface0;
+    padding-left: 15px;
+    padding-right: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#workspaces {
+    background: @surface0;
+    margin-left: 5px;
+    border-radius: 15px;
+}
+
+#workspaces button {
+    padding-left: 10px;
+    padding-right: 20px;
+    min-width: 0;
+    color: @overlay2;
+}
 
 #workspaces button.focused {
     color: @lavender;
-    background-color: @base;
-
 }
 
+#workspaces button.urgent {
+    color: #F9C096;
+}
 
 #workspaces button:hover {
-    background-color: @base;
-    color: @lavender;
+    background: @surface0;
+    border-color: @surface0;
+    color: #A4B9EF;
+    border-radius: 15px;
 }
-
 
 #clock {
-    color: @green;
+    background: @surface0;
+    color: @teal;
+    border-radius: 15px;
+    padding: 0px 15px 0px 15px;
 }
+
 
 #battery {
     color: @green;
@@ -64,10 +93,28 @@ tooltip {
 }
 
 #network {
-    color: #c4c19e;
-    border-radius: 0px 0px 0px 0px;
+    background: @surface0;
+    color: @sky;
 }
+
+#language {
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 15px;
+    color: @peach;
+}
+
 
 #pulseaudio {
     color: @mauve;
+    border-radius: 0px 15px 15px 0px;
+    margin-right: 5px;
+    padding-right: 15px;
+}
+
+
+#tray {
+    color: @teal;
+    border-radius: 15px;
+    padding: 0px 15px 0px 15px;
+    margin-right: 5px;
 }
