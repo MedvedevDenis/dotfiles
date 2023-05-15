@@ -36,8 +36,7 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 
-for_window [class=".*"] opacity $opacity
-for_window [app_id=".*"] opacity $opacity
+for_window [app_id="Alacritty"] opacity 0.9
 
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable;
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] resize set 800 600
