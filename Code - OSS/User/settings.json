@@ -1,0 +1,24 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "window.dialogStyle": "custom",
+    "files.autoSave": "afterDelay",
+    // Editor
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorBlinking": "phase",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.suggestSelection": "first",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Fira Code Retina",
+    "editor.fontWeight": "400",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+}
