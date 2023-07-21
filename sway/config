@@ -14,7 +14,7 @@ set $right l
 set $term alacritty
 set $menu rofi -show drun | xargs swaymsg exec
 
-output * bg ~/.config/sway/wp5.jpg fill
+output * bg ~/.config/sway/3225946.jpg fill
 
 output HDMI1 pos 0 0 res 1920x1080
 
@@ -37,7 +37,7 @@ client.background        $base
 
 
 for_window [app_id="Alacritty"] opacity 0.9
-
+for_window [title="Emulator" window_type="utility"] move scratchpad
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable;
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] resize set 800 600
 for_window [window_role="pop-up"] floating enable
@@ -230,3 +230,4 @@ exec systemctl --user import-environment
 exec mako
 exec blueman-applet
 exec_always autotiling -w 1 2 3 4 5 6 7 8 9
+exec_always waydroid session start
