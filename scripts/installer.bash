@@ -6,6 +6,7 @@ sudo pacman -Sy --noconfirm polkit \
                       zsh alacritty bat neovim \
                       sway waybar rofi swaybg \
                       mako \
+		      fzf \
                       light \
                       bluez bluez-utils blueman \
                       pipewire pipewire-jack pipewire-alsa pipewire-pulse \
