@@ -2,5 +2,4 @@
 
 yay -S catppuccin-gtk-theme-mocha \
        autotiling \
-       swaylock-effects-git \
-       cava
+       swaylock-effects-git
