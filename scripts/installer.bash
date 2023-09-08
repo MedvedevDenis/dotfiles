@@ -10,23 +10,21 @@ sudo pacman -Sy --noconfirm polkit \
                       light \
                       bluez bluez-utils blueman \
                       pipewire pipewire-jack pipewire-alsa pipewire-pulse \
-                      pavucontrol helvum \
+                      pavucontrol cava \
                       sof-firmware \
                       libreoffice-fresh \
                       obsidian foliate \
                       papirus-icon-theme \
-                      dbeaver docker \
-                      telegram-desktop discord \
+                      code dbeaver docker \
+                      telegram-desktop \
                       evince \
                       eog \
                       nautilus \
-                      lutris \
                       ttf-fira-code \
                       ttf-firacode-nerd \
                       base-devel \
-                      kvantum \
                       xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome \
-                      flamEnableeshot  grim \
+                      flameshot grim \
                       network-manager-applet nm-connection-editor \
                       lollypop
 
@@ -38,4 +36,4 @@ sudo nano /etc/pacman.conf
 sudo pacman -Sy --noconfirm wine-staging \
                       vulkan-icd-loader vulkan-intel lib32-vulkan-intel lib32-vulkan-icd-loader \
                       lib32-alsa-lib lib32-alsa-plugins lib32-libpulse \
-                      steam
+                      steam lutris
