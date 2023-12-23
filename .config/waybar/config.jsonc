@@ -1,11 +1,12 @@
 {
     "position": "top",
-    "height": 3,
+    "height": 5,
     "modules-left": [
         "sway/workspaces",
+	"custom/mediaplayer"
     ],
     "modules-center": [
-        "clock"
+        "clock"   
     ],
     "modules-right": [
         "tray",
@@ -19,28 +20,40 @@
         "tooltip": false,
         "interval": 1,
         "max-length": 35,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-    // Modules configuration
+    "custom/mediaplayer": {
+        "exec": "/usr/bin/python /home/medvedev/mediaplayer.py",
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{icon}",
-        "persistent_workspaces": {
+        "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
             "4": [],
-            "5": []
+            "5": [],
+	    "6": [],
+	    "7": [],
+	    "8": [],
+	    "9": [],
+	    "10": []
         },
         "format-icons": {
             "default": "",
             "urgent": "",
-            "focused": "",
+            "focused": ""
         }
     },
-    "tray":{
-        "spacing": 10
+    "tray": {
+        "spacing": 15
     },
     "sway/language": {
         "format": " {short}"
@@ -52,10 +65,10 @@
         },
         "format": "{icon}  {capacity}%",
         "format-warning": "{icon}  {capacity}%",
-        "format-critical": "<span foreground='#E38C8F'>{icon}  {capacity}%",
+        "format-critical": "<span foreground='#E38C8F'>{icon}  {capacity}%</span>",
         "format-charging": "  {capacity}%",
         "format-plugged": "  {capacity}%",
-        "format-alt": "{icon}  {time}",
+        "format-alt": "{icon} {time}",
         "format-full": " {capacity}%",
         "format-icons": [
             "",
@@ -68,10 +81,10 @@
     },
     "network": {
         "format-wifi": "  {essid}",
-        "format-ethernet": "󰤭  Отключено",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "  Отключено",
-        "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": " Отключено",
+        "tooltip-format-wifi": "Сила сигнала: {signalStrength}%"
     },
     "pulseaudio": {
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",

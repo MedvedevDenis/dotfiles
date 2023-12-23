@@ -5,12 +5,11 @@
     font-size: 13px;
     font-style: normal;
     min-height: 0;
-    border-radius: 0;
 }
 
 
 window#waybar {
-    background: #1E1E28;
+    background: @crust;
     color: #DADAE8;
 }
 
@@ -26,30 +25,28 @@ tooltip {
 #battery,
 #pulseaudio,
 #workspaces,
-#mpd,
 #tray,
 #language,
 #cpu,
 #memory,
 #network,
-#temperature {
-    background: @surface0;
-    padding-left: 15px;
-    padding-right: 2px;
+#temperature,
+#custom-mediaplayer {
+    background: @mantle; 
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #workspaces {
-    background: @surface0;
+    background: @mantle;
     margin-left: 5px;
     border-radius: 15px;
+    padding: 0px 15px 0px 15px;
 }
 
 #workspaces button {
-    padding-left: 10px;
-    padding-right: 20px;
     min-width: 0;
+    padding: 5px 10px;
     color: @overlay2;
 }
 
@@ -62,22 +59,21 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: @surface0;
-    border-color: @surface0;
-    color: #A4B9EF;
-    border-radius: 15px;
+    border-color: @mantle;
+    color: @mauve;
 }
 
 #clock {
-    background: @surface0;
+    background: @mantle;
     color: @teal;
-    border-radius: 15px;
+    border-radius: 15px 15px 15px 15px;
     padding: 0px 15px 0px 15px;
 }
 
 
 #battery {
     color: @green;
+    padding: 0px 15px 0px 0px;
 }
 
 #battery.charging {
@@ -93,14 +89,15 @@ tooltip {
 }
 
 #network {
-    background: @surface0;
+    background: @mantle;
     color: @sky;
+    padding: 0px 15px 0px 0px;
 }
 
 #language {
     border-radius: 15px 0px 0px 15px;
-    padding-left: 15px;
     color: @peach;
+    padding: 0px 15px 0px 15px;
 }
 
 
@@ -108,13 +105,20 @@ tooltip {
     color: @mauve;
     border-radius: 0px 15px 15px 0px;
     margin-right: 5px;
-    padding-right: 15px;
-}
+    padding: 0px 15px 0px 0px;
+}  
 
 
 #tray {
     color: @teal;
-    border-radius: 15px;
+    border-radius: 15px 15px 15px 15px;
     padding: 0px 15px 0px 15px;
     margin-right: 5px;
+}
+
+#custom-mediaplayer {
+    margin-left: 5px;
+    border-radius: 15px 15px 15px 15px;
+    color: @flamingo;
+    padding: 0px 15px 0px 15px;
 }

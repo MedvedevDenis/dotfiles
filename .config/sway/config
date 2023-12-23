@@ -14,20 +14,19 @@ set $right l
 set $term alacritty
 set $menu bemenu-run  -b --fb "#1e1e2e" --ff "#cdd6f4" --nb "#1e1e2e" --nf "#cdd6f4" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#f38ba8" --hf "#f9e2af" --nf "#cdd6f4" --af "#cdd6f4" --ab "#1e1e2e"
 
-output * bg ~/.config/sway/3225946.jpg fill
-
+output * bg ~/.config/sway/wp3.png fill
 
 output HDMI1 pos 0 0 res 1920x1080
 
-default_border pixel 1
+default_border pixel 2
 
-gaps inner 2
-gaps outer 2
-gaps bottom 2
-gaps top 2
-	
+gaps inner 0
+gaps outer 0
+gaps bottom 0
+gaps top 0
+
 # target                 title     bg    text   indicator  border
-client.focused           $pink     $base $text  $lavender      $lavender
+client.focused           $pink     $base $text  $teal      $teal
 client.focused_inactive  $mauve    $base $text  $base      $overlay0
 client.unfocused         $mauve    $base $text  $base      $overlay0
 client.urgent            $peach    $base $peach $base      $overlay0
@@ -247,7 +246,6 @@ bar {
 #
 
 exec systemctl --user import-environment
-
 exec mako
 exec blueman-applet
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
