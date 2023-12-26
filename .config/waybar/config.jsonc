@@ -1,6 +1,5 @@
 {
     "position": "top",
-    "height": 5,
     "modules-left": [
         "sway/workspaces",
 	"custom/mediaplayer"

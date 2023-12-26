@@ -1,14 +1,18 @@
 {
-    "workbench.colorTheme": "Catppuccin Mocha",
+    // Workbench
     "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    // Window
     "window.dialogStyle": "custom",
+    "window.titleBarStyle": "custom",
+    // Files
     "files.autoSave": "afterDelay",
     // Editor
     "editor.renderWhitespace": "boundary",
     "editor.cursorBlinking": "phase",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     },
     "editor.suggestSelection": "first",
     "editor.fontLigatures": true,
@@ -19,6 +23,8 @@
         "comments": true,
         "strings": true
     },
+    // Explorer
     "explorer.confirmDelete": false,
+    // Git
     "git.autofetch": true,
 }

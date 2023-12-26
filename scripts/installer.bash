@@ -1,32 +1,29 @@
 #!/bin/bash
 
-sudo pacman -Sy --noconfirm polkit \
-                      xorg-xwayland \
+sudo pacman -Sy --noconfirm polkit polkit-gnome \
                       wget \
-                      zsh alacritty bat neovim \
-                      sway waybar rofi swaybg \
+                      zsh alacritty bat exa neovim neofetch \
+                      sway waybar bemenu swa:ybg swayidle swaylock \
                       mako \
-		      fzf \
+                      fzf \
                       light \
                       bluez bluez-utils blueman \
-                      pipewire pipewire-jack pipewire-alsa pipewire-pulse \
-                      pavucontrol cava \
                       sof-firmware \
+                      pipewire pipewire-jack pipewire-alsa pipewire-pulse \
+                      pavucontrol \
                       libreoffice-fresh \
-                      obsidian foliate \
+                      obsidian gnome-text-editor \
                       papirus-icon-theme \
                       code dbeaver docker \
-                      telegram-desktop \
+                      telegram-desktop discord \
                       evince \
                       eog \
                       nautilus \
-                      ttf-fira-code \
-                      ttf-firacode-nerd \
-                      base-devel \
+                      ttf-fira-code ttf-firacode-nerd \ 
+                      base-devel clang rustup clangd pnpm \
                       xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome \
-                      flameshot grim \
-                      network-manager-applet nm-connection-editor \
                       lollypop
+
 
 
 echo "Включение multilib"

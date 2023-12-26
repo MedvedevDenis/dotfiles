@@ -14,7 +14,7 @@ set $right l
 set $term alacritty
 set $menu bemenu-run  -b --fb "#1e1e2e" --ff "#cdd6f4" --nb "#1e1e2e" --nf "#cdd6f4" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#f38ba8" --hf "#f9e2af" --nf "#cdd6f4" --af "#cdd6f4" --ab "#1e1e2e"
 
-output * bg ~/.config/sway/wp3.png fill
+output * bg ~/.config/sway/lonely-fish.png fill
 
 output HDMI1 pos 0 0 res 1920x1080
 
@@ -27,10 +27,10 @@ gaps top 0
 
 # target                 title     bg    text   indicator  border
 client.focused           $pink     $base $text  $teal      $teal
-client.focused_inactive  $mauve    $base $text  $base      $overlay0
-client.unfocused         $mauve    $base $text  $base      $overlay0
-client.urgent            $peach    $base $peach $base      $overlay0
-client.placeholder       $overlay0 $base $text  $base      $overlay0
+client.focused_inactive  $mauve    $base $text  $overlay0  $overlay0
+client.unfocused         $mauve    $base $text  $overlay0  $overlay0
+client.urgent            $peach    $base $peach $overlay0  $overlay0
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 
@@ -81,21 +81,7 @@ bindsym $mod+d exec $menu
 
 floating_modifier $mod normal
 
-bindsym $mod+Shift+r exec swaylock \
-	--screenshots \
-	--clock \
-	--indicator \
-	--indicator-radius 100 \
-	--indicator-thickness 7 \
-	--effect-blur 7x5 \
-	--effect-vignette 0.5:0.5 \
-	--ring-color bb00cc \
-	--key-hl-color 880033 \
-	--line-color 00000000 \
-	--inside-color 00000088 \
-	--separator-color 00000000 \
-	--grace 2 \
-	--fade-in 0.2
+bindsym $mod+Shift+r exec swaylock
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -160,7 +146,6 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-    
 #
 # Layout stuff:
 #
@@ -244,6 +229,12 @@ bar {
 #
 # Exec
 #
+exec swayidle -w \
+         timeout 60 'swaylock' \
+         timeout 300 'swaymsg "output * power off"' \
+         resume 'swaymsg "output * power on"' \
+         after-resume 'swaymsg "output * enable"' \
+         before-sleep 'swaylock'
 
 exec systemctl --user import-environment
 exec mako
