@@ -5,14 +5,14 @@ cd ~/dotfiles
 cp .zshrc /home/${USER}
 
 
-cp -r .config/alacritty /home/${USER}/.config/alacritty
-cp -r .config/lazygit /home/${USER}/.config/lazygit
-cp -r .config/mako /home/${USER}/.config/mako
-cp -r .config/mc /home/${USER}/.config/mc
-cp -r .config/neofetch /home/${USER}/.config/neofetch
-cp -r .config/sway /home/${USER}/.config/sway
-cp -r .config/swaylock /home/${USER}/.config/swaylock
-cp -r .config/waybar /home/${USER}/.config/waybar
+cp -r .config/alacritty/* /home/${USER}/.config/alacritty
+cp -r .config/lazygit/* /home/${USER}/.config/lazygit
+cp -r .config/mako/* /home/${USER}/.config/mako
+cp -r .config/mc/* /home/${USER}/.config/mc
+cp -r .config/neofetch/* /home/${USER}/.config/neofetch
+cp -r .config/sway/* /home/${USER}/.config/sway
+cp -r .config/swaylock/* /home/${USER}/.config/swaylock
+cp -r .config/waybar/* /home/${USER}/.config/waybar
 
 
 mkdir tmp
