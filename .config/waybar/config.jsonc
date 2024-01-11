@@ -5,8 +5,7 @@
         "mpris"
     ],
     "modules-center": [
-        "clock",
-        "cava"
+        "clock"
     ],
     "modules-right": [
         "tray",
