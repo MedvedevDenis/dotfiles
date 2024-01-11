@@ -2,33 +2,23 @@
     "position": "top",
     "modules-left": [
         "sway/workspaces",
-	"custom/mediaplayer"
+        "mpris"
     ],
     "modules-center": [
-        "clock"   
+        "clock",
+        "cava"
     ],
     "modules-right": [
         "tray",
         "sway/language",
         "network",
+        "cpu",
+        "temperature",
+        "memory",
+        "disk",
         "battery",
-        "pulseaudio"
+        "wireplumber"
     ],
-    "clock": {
-        "format": "{:%A, %d %B %H:%M:%S}",
-        "tooltip": false,
-        "interval": 1,
-        "max-length": 35,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
-    "custom/mediaplayer": {
-        "exec": "/usr/bin/python /home/medvedev/mediaplayer.py",
-        "format": "{}",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
-    },
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -39,17 +29,38 @@
             "3": [],
             "4": [],
             "5": [],
-	    "6": [],
-	    "7": [],
-	    "8": [],
-	    "9": [],
-	    "10": []
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
         },
         "format-icons": {
             "default": "",
             "urgent": "",
             "focused": ""
         }
+    },
+    "mpris": {
+        "format": "{status_icon} {artist} - {title} {player_icon}",
+        "tooltip-format": "{artist} - {title} ({album})",
+        "max-length": 50,
+        "player-icons": {
+            "default": "",
+            "firefox": "",
+            "telegram": ""
+        },
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "stopped": ""
+        }
+    },
+    "clock": {
+        "format": "{:%A, %d %B %H:%M:%S}",
+        "interval": 1,
+        "max-length": 35,
+        "tooltip-format": "<big>{calendar}</big>"
     },
     "tray": {
         "spacing": 15
@@ -62,11 +73,11 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
-        "format-warning": "{icon}  {capacity}%",
-        "format-critical": "<span foreground='#E38C8F'>{icon}  {capacity}%</span>",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-warning": "{icon} {capacity}%",
+        "format-critical": "<span foreground='#E38C8F'>{icon} {capacity}%</span>",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
         "format-full": " {capacity}%",
         "format-icons": [
@@ -79,27 +90,49 @@
         "tooltip-format": "{time}"
     },
     "network": {
-        "format-wifi": "  {essid}",
+        "format-wifi": " {essid}",
         "format-ethernet": "󰈀 {ifname}",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": " Отключено",
-        "tooltip-format-wifi": "Сила сигнала: {signalStrength}%"
+        "tooltip-format-wifi": "Сила сигнала: {signalStrength}%",
+        "on-click": "alacritty -e nmtui"
     },
-    "pulseaudio": {
+    "cpu": {
+        "interval": 1,
+        "format": " {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}{usage:>2}%",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ]
+    },
+    "temperature": {
+        "format": "󰏈 {temperatureC}°C"
+    },
+    "memory": {
+        "interval": 1,
+        "format": "󰍛 {percentage}%"
+    },
+    "disk": {
+        "format": "󰨣 {percentage_used}%"
+    },
+    "wireplumber": {
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "format": "{icon}  {volume}%",
-        "format-muted": "  Muted",
+        "format": "{icon} {volume}%",
+        "format-muted": " Без звука",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
             "headset": "",
-            "phone": "",
             "portable": "",
-            "car": "",
             "default": [
                 "",
                 ""
             ]
-        },
-    },
+        }
+    }
 }

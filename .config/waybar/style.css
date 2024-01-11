@@ -2,7 +2,7 @@
 
 * {
     font-family: Fira Code Retina;
-    font-size: 13px;
+    font-size: 12px;
     font-style: normal;
     min-height: 0;
 }
@@ -10,35 +10,35 @@
 
 window#waybar {
     background: @crust;
-    color: #DADAE8;
 }
 
 tooltip {
     background: @base;
     border-radius: 15px;
-    border-width: 3px;
+    border-width: 1px;
     border-style: solid;
     border-color: @lavender;
 }
 
-#clock,
-#battery,
-#pulseaudio,
+
 #workspaces,
+#mpris,
+#clock,
 #tray,
 #language,
+#network,
+#battery,
+#temperature,
 #cpu,
 #memory,
-#network,
-#temperature,
-#custom-mediaplayer {
-    background: @mantle; 
+#disk,
+#wireplumber {
+    background: @base;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #workspaces {
-    background: @mantle;
     margin-left: 5px;
     border-radius: 15px;
     padding: 0px 15px 0px 15px;
@@ -54,20 +54,43 @@ tooltip {
     color: @lavender;
 }
 
-#workspaces button.urgent {
-    color: #F9C096;
-}
 
 #workspaces button:hover {
     border-color: @mantle;
     color: @mauve;
 }
 
+#mpris {
+    margin-left: 5px;
+    border-radius: 15px 15px 15px 15px;
+    color: @flamingo;
+    padding: 0px 15px 0px 15px;
+}
+
 #clock {
-    background: @mantle;
     color: @teal;
     border-radius: 15px 15px 15px 15px;
     padding: 0px 15px 0px 15px;
+}
+
+
+#tray {
+    color: @teal;
+    border-radius: 15px 15px 15px 15px;
+    padding: 0px 15px 0px 15px;
+    margin-right: 5px;
+}
+
+#language {
+    border-radius: 15px 0px 0px 15px;
+    color: @peach;
+    padding: 0px 15px 0px 15px;
+}
+
+
+#network {
+    color: @sky;
+    padding: 0px 15px 0px 0px;
 }
 
 
@@ -88,37 +111,33 @@ tooltip {
     color: @maroon;
 }
 
-#network {
-    background: @mantle;
-    color: @sky;
+#cpu {
+    color: @green;
     padding: 0px 15px 0px 0px;
 }
 
-#language {
-    border-radius: 15px 0px 0px 15px;
-    color: @peach;
-    padding: 0px 15px 0px 15px;
+#temperature {
+    color: @yellow;
+    padding: 0px 15px 0px 0px;
 }
 
 
-#pulseaudio {
+#memory {
+    color: @blue;
+    padding: 0px 15px 0px 0px;
+}
+
+
+#disk {
+    color: @maroon;
+    padding: 0px 15px 0px 0px;
+}
+
+
+
+#wireplumber {
     color: @mauve;
     border-radius: 0px 15px 15px 0px;
     margin-right: 5px;
     padding: 0px 15px 0px 0px;
-}  
-
-
-#tray {
-    color: @teal;
-    border-radius: 15px 15px 15px 15px;
-    padding: 0px 15px 0px 15px;
-    margin-right: 5px;
-}
-
-#custom-mediaplayer {
-    margin-left: 5px;
-    border-radius: 15px 15px 15px 15px;
-    color: @flamingo;
-    padding: 0px 15px 0px 15px;
 }
