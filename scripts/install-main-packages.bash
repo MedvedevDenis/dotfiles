@@ -6,7 +6,6 @@ sudo pacman -Sy --noconfirm polkit polkit-gnome \
                       sway swaybg swayidle swaylock  waybar bemenu  \
                       slurp grim \
                       mako \
-                      light \
                       man \
                       bluez bluez-utils blueman \
                       sof-firmware \
