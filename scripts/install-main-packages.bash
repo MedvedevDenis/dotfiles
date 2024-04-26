@@ -20,7 +20,7 @@ sudo pacman -Sy --noconfirm polkit polkit-gnome \
                       evince eog \
                       nautilus mc \
                       ttf-fira-code ttf-firacode-nerd \
-                      base-devel clang rustup clangd cmake pnpm \
+                      base-devel clang rustup cmake pnpm \
                       lollypop
 
 
