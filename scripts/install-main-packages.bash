@@ -4,6 +4,7 @@ sudo pacman -Sy --noconfirm polkit polkit-gnome \
                       xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome xorg-xwayland \
                       zsh alacritty bat exa neovim neofetch fzf \
                       sway swaybg swayidle swaylock  waybar bemenu  \
+                      ly \
                       slurp grim \
                       mako \
                       man \
