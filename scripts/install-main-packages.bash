@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sudo pacman -Sy --noconfirm xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome xorg-xwayland \
+sudo pacman -Sy --noconfirm polkit polkit-gnome \
+    xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gnome xorg-xwayland \
     zsh alacritty bat neovim neofetch fzf zsh-autosuggestions \
     sway swaybg swayidle swaylock waybar bemenu \
     slurp grim \
