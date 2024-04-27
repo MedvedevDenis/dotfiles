@@ -1,0 +1,102 @@
+{
+  // Window
+  "window.dialogStyle": "custom",
+  "window.titleBarStyle": "custom",
+  // Workbench
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorCustomizations": {},
+  "workbench.editor.labelFormat": "medium",
+  "workbench.editor.tabActionLocation": "right",
+  // Files
+  "files.autoSave": "afterDelay",
+  // Editor
+  "editor.renderWhitespace": "boundary",
+  "editor.cursorBlinking": "phase",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
+  },
+  "editor.useTabStops": true,
+  "editor.suggestSelection": "first",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code Retina",
+  "editor.fontWeight": "400",
+  //Explorer
+  "explorer.confirmDelete": false,
+  //Terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.shellIntegration.suggestEnabled": true,
+  "terminal.external.linuxExec": "alacritty",
+
+  "redhat.telemetry.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.language": "en,ru",
+  "cmake.configureOnOpen": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.languageServer": "Pylance",
+  "jupyter.askForKernelRestart": false,
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "autoDocstring.docstringFormat": "numpy",
+  "notebook.lineNumbers": "on",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  // Git
+  "git.openRepositoryInParentFolders": "never",
+  "git.autofetch": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "chrono",
+    "drei",
+    "itertools",
+    "libsqlite",
+    "pipemeter",
+    "rusqlite",
+    "serde",
+    "tauri",
+    "xlsxwriter",
+    "zustand"
+  ],
+  "cmake.showOptionsMovedNotification": false
+}

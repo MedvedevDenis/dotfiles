@@ -26,7 +26,6 @@ exec_always {
     gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Lavender-Cursors'
 }
 
-
 # target                 title     bg    text   indicator  border
 client.focused           $pink     $base $text  $teal      $teal
 client.focused_inactive  $mauve    $base $text  $overlay0  $overlay0
